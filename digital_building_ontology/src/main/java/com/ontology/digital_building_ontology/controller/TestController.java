@@ -15,6 +15,12 @@ public class TestController {
         map.put("Hello" , "World");
         return map;
     }
+    @GetMapping("/testx")
+    public Map<String , String> testx(){
+        Map<String , String> map = new HashMap<>();
+        map.put("Hello" , "World");
+        return map;
+    }
     @PostMapping("/test")
     public Map<String , String> test1(){
         Map<String , String> map = new HashMap<>();
