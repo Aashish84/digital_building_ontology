@@ -18,16 +18,13 @@ public class Connection {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
-
     private String connectionId;
     private String resourceType;
     private String connectionType;
-
     @Column(name = "source_id")
     private String sourceId;
-
-    @Column(name="target_id")
-    private String targetId;
-
+    @ManyToOne
+    @JoinColumn(name = "target_id")
+    private TestVdmsDevice targetId;
 
 }

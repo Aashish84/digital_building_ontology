@@ -14,7 +14,6 @@ public class TestVdmsDevice {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
-
     private String deviceId;
     private String deviceName;
     private String deviceType;
@@ -23,8 +22,4 @@ public class TestVdmsDevice {
     @OneToMany
     @JoinColumn(name = "source_id")
     private List<Connection> connectionSource;
-
-    @OneToMany
-    @JoinColumn(name = "target_id")
-    private List<Connection> connectionTarget;
 }
