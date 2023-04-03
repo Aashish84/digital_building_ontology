@@ -4,11 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
+import org.springframework.beans.factory.annotation.Value;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Setter
@@ -17,10 +16,18 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Connection {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
+
     private String connectionId;
     private String resourceType;
     private String connectionType;
-    private String deviceId;
+
+    @Column(name = "source_id")
+    private String sourceId;
+
+    @Column(name="target_id")
+    private String targetId;
+
 
 }

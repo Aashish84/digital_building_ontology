@@ -2,20 +2,29 @@ package com.ontology.digital_building_ontology.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
 @Entity
 public class TestVdmsDevice {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
+
+    private String deviceId;
     private String deviceName;
     private String deviceType;
     private String entityId;
+
+    @OneToMany
+    @JoinColumn(name = "source_id")
+    private List<Connection> connectionSource;
+
+    @OneToMany
+    @JoinColumn(name = "target_id")
+    private List<Connection> connectionTarget;
 }
