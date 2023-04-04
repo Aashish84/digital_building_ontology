@@ -26,5 +26,4 @@ public class Connection {
     @ManyToOne
     @JoinColumn(name = "target_id")
     private TestVdmsDevice targetId;
-
 }
