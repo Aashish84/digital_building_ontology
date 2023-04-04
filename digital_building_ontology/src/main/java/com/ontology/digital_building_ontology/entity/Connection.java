@@ -21,12 +21,17 @@ public class Connection {
     private String connectionId;
     private String resourceType;
     private String connectionType;
-
     @Column(name = "source_id")
     private String sourceId;
+<<<<<<< HEAD
 
     @Column(name = "target_id")
     private String targetId;
 
+=======
+    @ManyToOne
+    @JoinColumn(name = "target_id")
+    private TestVdmsDevice targetId;
+>>>>>>> master
 
 }
