@@ -1,11 +1,14 @@
 package com.ontology.digital_building_ontology.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "location", schema = "dump_vdmns", catalog = "")
+@Table(name = "location")
 public class LocationEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     @Id
     @Column(name = "id")
     private String id;
