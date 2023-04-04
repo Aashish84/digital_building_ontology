@@ -23,11 +23,7 @@ public class Connection {
     private String connectionType;
     @Column(name = "source_id")
     private String sourceId;
-
-
     @ManyToOne
     @JoinColumn(name = "target_id")
     private TestVdmsDevice targetId;
-
-
 }
