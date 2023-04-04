@@ -18,7 +18,6 @@ public class Connection {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
-
     private String connectionId;
     private String resourceType;
     private String connectionType;
@@ -26,7 +25,7 @@ public class Connection {
     @Column(name = "source_id")
     private String sourceId;
 
-    @Column(name="target_id")
+    @Column(name = "target_id")
     private String targetId;
 
 
