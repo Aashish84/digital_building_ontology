@@ -11,6 +11,6 @@ import java.util.List;
 public interface LocationMapper {
 
     LocationDTO locationDTO(LocationEntity locationEntity);
-    List<LocationDTO> locationDTOList(List<LocationMapper> locationMapperList);
+    List<LocationDTO> locationDTOList(List<LocationEntity> locationMapperList);
 
 }
