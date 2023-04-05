@@ -2,6 +2,7 @@ package com.ontology.digital_building_ontology.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ontology.digital_building_ontology.entity.DeviceEntity;
+import com.ontology.digital_building_ontology.entity.LocationEntity;
 import com.ontology.digital_building_ontology.entity.TestVdmsDevice;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,4 +16,8 @@ public class ConnectionDto {
     private String connectionType;
     private String sourceId;
     private DeviceEntity targetId;
+
+    private LocationEntity locationId;
+
+
 }

@@ -24,4 +24,10 @@ public class Connection {
     @ManyToOne
     @JoinColumn(name = "target_id")
     private DeviceEntity targetId;
+
+    @ManyToOne
+    @JoinColumn(name = "location_id")
+    private LocationEntity locationId;
+
+
 }

@@ -3,6 +3,8 @@ package com.ontology.digital_building_ontology.dto;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 public class LocationDTO {
@@ -15,5 +17,6 @@ public class LocationDTO {
     private String recordCheckListStatus;
     private Integer zIndex;
     private  String status;
+
 
 }
