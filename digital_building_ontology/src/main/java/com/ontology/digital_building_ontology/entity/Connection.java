@@ -5,8 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
-import org.springframework.beans.factory.annotation.Value;
-
 import javax.persistence.*;
 
 @Entity
@@ -25,5 +23,5 @@ public class Connection {
     private String sourceId;
     @ManyToOne
     @JoinColumn(name = "target_id")
-    private TestVdmsDevice targetId;
+    private DeviceEntity targetId;
 }

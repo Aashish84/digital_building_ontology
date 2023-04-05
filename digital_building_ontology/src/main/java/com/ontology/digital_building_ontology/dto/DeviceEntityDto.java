@@ -1,6 +1,5 @@
 package com.ontology.digital_building_ontology.dto;
 
-import com.ontology.digital_building_ontology.entity.Connection;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +9,7 @@ import java.util.List;
 @Setter
 public class DeviceEntityDto {
     private String id;
-    private List<Connection> connectionSource;
+    private List<ConnectionDto> connectionSourceDto;
     private String connectionType;
     private String displayName;
     private String description;
