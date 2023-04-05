@@ -1,10 +1,15 @@
 package com.ontology.digital_building_ontology.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "location")
 public class LocationEntity {
     @GeneratedValue(generator = "system-uuid")
@@ -36,6 +41,10 @@ public class LocationEntity {
     @Basic
     @Column(name = "status")
     private String status;
+
+
+
+
 
     public String getId() {
         return id;

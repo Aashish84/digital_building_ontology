@@ -20,6 +20,7 @@ public class LocationServiceImpl implements LocationService {
 
     @Override
     public LocationDTO saveLocation(LocationEntity locationEntity) {
+        System.out.println(locationEntity.getName());
         LocationEntity save= locationRepository.save(locationEntity);
         return locationMapper.locationDTO(save);
     }
