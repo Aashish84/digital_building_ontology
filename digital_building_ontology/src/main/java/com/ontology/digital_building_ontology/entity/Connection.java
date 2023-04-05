@@ -27,7 +27,7 @@ public class Connection {
 
     @ManyToOne
     @JoinColumn(name = "location_id")
-    private LocationEntity locationId;
+    private LocationEntity location;
 
 
 }

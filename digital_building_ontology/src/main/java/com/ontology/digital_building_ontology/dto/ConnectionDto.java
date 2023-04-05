@@ -17,7 +17,7 @@ public class ConnectionDto {
     private String sourceId;
     private DeviceEntity targetId;
 
-    private LocationEntity locationId;
+    private LocationEntity location;
 
 
 }
