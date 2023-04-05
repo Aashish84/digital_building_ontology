@@ -9,7 +9,7 @@ import java.util.List;
 
 @Mapper(componentModel = "spring" , uses = {ConnectionMapper.class})
 public interface DeviceEntityMapper {
-    @Mapping(source = "deviceEntity.connectionSource" , target = "connectionSourceDto")
+    @Mapping( target = "connectionSource" , qualifiedByName = "noSourceId")
     DeviceEntityDto entityToDto(DeviceEntity deviceEntity);
     List<DeviceEntityDto> entitiesToDtos (List<DeviceEntity> deviceEntities);
 }

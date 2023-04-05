@@ -9,7 +9,7 @@ import java.util.List;
 @Setter
 public class DeviceEntityDto {
     private String id;
-    private List<ConnectionDto> connectionSourceDto;
+    private List<ConnectionDto> connectionSource;
     private String connectionType;
     private String displayName;
     private String description;
